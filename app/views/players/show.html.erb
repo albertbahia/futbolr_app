@@ -1,0 +1,15 @@
+<h2><%= @player.name.capitalize %>'s Profile</h2>
+
+<img src="<%= @player.photo_url %>">
+<br>
+<strong>Position: </strong><%= @player.position.capitalize %>
+<br>
+<strong>Goals Scored: </strong><%= @player.goals_scored %>
+<br>
+<strong>Country: </strong><%= @player.country.capitalize %>
+<br>
+<strong>Rating: </strong><%= @player.rating %>
+<br>
+<br>
+
+<%= link_to  'Back to Players', players_path %>

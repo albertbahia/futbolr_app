@@ -3,7 +3,7 @@
 <% @players.each do |player| %>
   <hr>
   <p><img src="<%= player.photo_url %>"></p>
-  <p><strong>Name: </strong><%= player.name.capitalize %></p>
+  <p><strong>Name: </strong><%= link_to "#{player.name.capitalize}", player_path(player.id) %></a></p>
   <p><strong>Position: </strong><%= player.position %></p>
   <p><strong>Goals Scored: </strong><%= player.goals_scored %></p>
   <p><strong>Country: </strong><%= player.country %></p>
