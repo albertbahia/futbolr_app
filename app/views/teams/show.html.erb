@@ -1,0 +1,11 @@
+<h2>Team <%= @team.name.capitalize %>'s Profile</h2>
+
+<img src="<%= @team.flag_url %>">
+<h3>Information:</h3>
+<p><strong>Goals Scored: </strong><%= @team.goals_scored %></p>
+<p><strong>Formation: </strong><%= @team.formation %></p>
+<%= link_to 'Edit Profile', edit_team_path(@team) %>
+<br>
+<br>
+
+<%= link_to 'Back to Teams', teams_path %>

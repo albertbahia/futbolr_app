@@ -1,0 +1,31 @@
+<h2>Edit Team <%= @team.name.capitalize %>'s Profile</h2>
+
+<ul>
+  <% @team.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+</ul>
+
+<%= form_for @team do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+
+  <%= f.label :flag_url %>
+  <%= f.text_field :flag_url %>
+  <br>
+
+  <%= f.label :goals_scored %>
+  <%= f.text_field :goals_scored %>
+  <br>
+
+  <%= f.label :formation %>
+  <%= f. text_field :formation %>
+  <br>
+
+  <%= f.submit 'Edit Team Profile' %>
+<% end %>
+<%= link_to 'Delete Team', team_path(@team), method: :delete %>
+<br>
+<br>
+<%= link_to "Back to #{@team.name.capitalize}'s Profile", team_path(@team) %>

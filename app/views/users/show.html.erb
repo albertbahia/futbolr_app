@@ -1,0 +1,8 @@
+<h2><%= @user.username.capitalize %>'s Profile</h2>
+
+<p><strong>First Name: </strong><%= @user.first_name.capitalize %></p>
+<p><strong>Last Name: </strong><%= @user.last_name.capitalize %></p>
+<p><strong>Email: </strong><%= @user.email %></p>
+
+<%= link_to "Back to Users", users_path %> |
+<%= link_to "Edit Profile", edit_user_path %>

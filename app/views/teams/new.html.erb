@@ -1,0 +1,30 @@
+<h2>Create Team</h2>
+
+<ul>
+  <% @team.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+</ul>
+
+<%= form_for @team do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+
+  <%=f.label :flag_url %>
+  <%= f.text_field :flag_url %>
+  <br>
+
+  <%= f.label :goals_scored %>
+  <%= f.text_field :goals_scored %>
+  <br>
+
+  <%= f.label :formation %>
+  <%= f.text_field :formation %>
+  <br>
+
+  <%= f.submit 'Create Team' %>
+<% end %>
+<br>
+
+<%= link_to 'Back to Teams',  teams_path %>

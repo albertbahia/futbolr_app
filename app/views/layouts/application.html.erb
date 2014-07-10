@@ -7,8 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <h1>Futbol.r</h1>
+  <%= link_to 'Users', users_path %>
+  <%= link_to 'Teams', teams_path %>
+  <%= yield %>
 
 </body>
 </html>

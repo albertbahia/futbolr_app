@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  # Users, Teams, Players
+  resources :users, :teams
+
+  # Sessions
+  # --WRITE USER LOGIN ROUTES HERE------
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
