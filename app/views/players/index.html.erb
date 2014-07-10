@@ -1,0 +1,11 @@
+<h2>Players Index</h2>
+
+<% @players.each do |player| %>
+  <hr>
+  <p><img src="<%= player.photo_url %>"></p>
+  <p><strong>Name: </strong><%= player.name.capitalize %></p>
+  <p><strong>Position: </strong><%= player.position %></p>
+  <p><strong>Goals Scored: </strong><%= player.goals_scored %></p>
+  <p><strong>Country: </strong><%= player.country %></p>
+  <p><strong>Rating: </strong><%= player.rating %></p>
+<% end %>
