@@ -4,13 +4,14 @@
 <h3>Information:</h3>
 <p><strong>Goals Scored: </strong><%= @team.goals_scored %></p>
 <p><strong>Formation: </strong><%= @team.formation %></p>
-<p><strong>Players:</strong></p>
+<p><strong>Players on Team:</strong></p>
+<%= link_to 'Add Player', new_player_path %>
 <ul>
   <% @team.players.each do |player| %>
     <li><%= player.name.capitalize %></li>
   <% end %>
 </ul>
-<%= link_to 'Edit Profile', edit_team_path(@team) %>
+<%= link_to 'Edit Team Information', edit_team_path(@team) %>
 <br>
 <br>
 
