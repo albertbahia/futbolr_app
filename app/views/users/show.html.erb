@@ -6,7 +6,7 @@
 <p><strong>Teams:</strong></p>
 <ul>
   <% @user.teams.each do |team| %>
-    <%= team.name.capitalize %>
+    <%= link_to "#{team.name.capitalize}", team_path %>
   <% end %>
 </ul>
 <%= link_to "Back to Users", users_path %> |
