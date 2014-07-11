@@ -1,4 +1,4 @@
-<h2>Edit Profile</h2>
+<h2>Create New Player</h2>
 
 <ul>
   <% @player.errors.full_messages.each do |error| %>
@@ -31,5 +31,8 @@
   <%= f.text_field :rating %>
   <br>
 
-  <%= f.submit 'Edit Profile' %>
+  <%= f.submit 'Create Player' %>
 <% end %>
+<br>
+
+<%= link_to 'Back to Players', players_path %>
