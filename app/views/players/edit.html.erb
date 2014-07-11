@@ -33,3 +33,7 @@
 
   <%= f.submit 'Edit Profile' %>
 <% end %>
+<%= link_to 'Delete Profile', player_path(@player), method: :delete %>
+<br>
+<br>
+<%= link_to 'Back to Player', player_path(@player) %>

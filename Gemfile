@@ -39,6 +39,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Rails Asset Pipeline
 gem 'rails_12factor', group: :production
 
+# HTTParty
+gem 'httparty', '~> 0.13.1'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
