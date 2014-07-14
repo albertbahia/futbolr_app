@@ -11,17 +11,17 @@ class FIFA
     # end
   end
 
-  def self.make_player(player_hash)
-    Player.create(
-      {
-        name: player_hash["first_name"] || 'Unknown',
-        photo_url: 'http://www.placekitten.com/300/300',
-        position: player_hash["type"],
-        goals_scored: 5,
-        country: player_hash["country"] || 'Unknown',
-        team_id: 2,
-        rating: player_hash["rating"]
-      })
-  end
+  # def self.make_player(player_hash)
+  #   Player.create(
+  #     {
+  #       name: player_hash["first_name"] || 'Unknown',
+  #       photo_url: 'http://www.placekitten.com/300/300',
+  #       position: player_hash["type"],
+  #       goals_scored: 5,
+  #       country: player_hash["country"] || 'Unknown',
+  #       team_id: 2,
+  #       rating: player_hash["rating"]
+  #     })
+  # end
 
 end
