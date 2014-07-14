@@ -1,0 +1,14 @@
+<h2>Player Search Results</h2>
+
+<% @fifa_players.each do |player| %>
+  <strong>Club ID: </strong><%= player["club_id"] %>
+  <br>
+  <strong>First Name: </strong><%= player["first_name"] %>
+  <br>
+  <strong>Last Name: </strong><%= player["last_name"] || "N/A" %>
+  <br>
+  <strong>Common Name: </strong><%= player["common_name"] || "N/A" %>
+  <br>
+  <strong>Rating: </strong><%= player["rating"] %>
+  <hr>
+<% end %>

@@ -7,10 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-require 'pry'
-
-
-
 users = [
   {
     username: 'the_great_one',
@@ -24,7 +20,7 @@ users = [
         flag_url: 'http://www.placekitten.com/300/300',
         goals_scored: 4,
         formation: '4-5-1',
-        players: FIFA.api_call(1)
+        players:
         [
           {
             name: 'mesut ozil',

@@ -40,6 +40,11 @@ class TeamsController < ApplicationController
     redirect_to teams_path
   end
 
+  def search_results
+    @fifa_players = FIFA.api_call(params[:club_id])
+  end
+
+
   private
   def team_params
     params.require(:team).permit(:name, :flag_url, :goals_scored, :formation)

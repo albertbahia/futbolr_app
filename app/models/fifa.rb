@@ -5,6 +5,7 @@ class FIFA
     url = "http://tools.fifaguide.com/api/club/#{club_id}"
     api_response = HTTParty.get(url)
     players_array = JSON.parse(api_response)
+    return players_array
     # players_array.each do |player_hash|
     #   make_player(player_hash)
     # end

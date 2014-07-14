@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
   root to: 'home#index'
+  get '/search' => 'teams#search_results', as: 'search'
+
+
 
   # Users, Teams, Players
   resources :users, :teams, :players
