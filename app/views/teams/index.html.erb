@@ -1,7 +1,5 @@
 <h2>Teams Index</h2>
 
-<%= link_to 'Create Team', new_team_path %>
-
 <hr>
 <% @teams.each do |team| %>
   <strong>Team: </strong><%= link_to "#{team.name.capitalize}", team_path(team.id) %>
