@@ -13,7 +13,7 @@ class TeamsController < ApplicationController
   def create
     @team = Team.new(team_params)
     @team.user_id = session[:current_user]
-    
+
     if @team.save
       redirect_to team_path(@team)
     else
@@ -49,6 +49,7 @@ class TeamsController < ApplicationController
   end
 
   def add_new_player
+    
     @player = Player.create({
       name: params[:name],
       photo_url: params[:photo_url],

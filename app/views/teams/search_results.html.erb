@@ -15,7 +15,7 @@
   <strong>Rating: </strong><%= player["rating"] %>
   <%= form_tag('/add_new_player', method: :post) do |f| %>
     <%= hidden_field_tag :name, player["first_name"] || player["common_name"] || "N/A" %>
-    <%= hidden_field_tag :photo_url, player["foot"] %>
+    <%= hidden_field_tag :photo_url, "http://www.placekitten.com/300/300" %>
     <%= hidden_field_tag :position, player["type"] %>
     <%= hidden_field_tag :goals_scored, player["attribute1"].to_i %>
     <%= hidden_field_tag :country, player["dob"] %>
