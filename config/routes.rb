@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   resources :users, :teams, :players
 
   # Sessions
-  # --WRITE USER LOGIN ROUTES HERE------
+  get '/login' => 'sessions#new'
+  post '/sessions' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
