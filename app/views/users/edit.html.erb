@@ -1,40 +1,6 @@
 <h2>Edit <%= @user.username.capitalize %>'s Profile</h2>
-
-<ul>
-  <% @user.errors.full_messages.each do |error| %>
-    <li><%= error %></li>
-  <% end %>
-</ul>
-
-<%= form_for @user do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <br>
-
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
-  <br>
-
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
-  <br>
-
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <br>
-
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <br>
-
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-  <br>
-
-  <%= f.submit 'Edit Profile' %>
-<% end %>
+<%= render 'form' %>
 <%= link_to 'Delete Profile', user_path(@user), method: :delete %>
 <br>
 <br>
-
 <%= link_to "Back to Users", users_path %>
