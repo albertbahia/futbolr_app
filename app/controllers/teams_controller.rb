@@ -44,6 +44,20 @@ class TeamsController < ApplicationController
     @fifa_players = FIFA.api_call(params[:club_id])
   end
 
+  def add_new_player
+
+    @player = Player.create({
+      name: params[:name],
+      photo_url: "http://www.placekitten.com/300/300",
+      position: params[:position],
+      goals_scored: params[:goals_scored],
+      country: params[:country],
+      rating: params[:rating]
+      })
+
+      redirect_to players_path
+  end
+
 
   private
   def team_params

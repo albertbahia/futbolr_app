@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
   get '/search' => 'teams#search_results', as: 'search'
-
+  post '/add_new_player' => 'teams#add_new_player', as: 'new_player_fifa'
 
 
   # Users, Teams, Players

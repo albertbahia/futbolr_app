@@ -4,12 +4,23 @@
 <% @fifa_players.each do |player| %>
   <strong>Club ID: </strong><%= player["club_id"] %>
   <br>
-  <strong>First Name: </strong><%= player["first_name"] %>
+  <strong>First Name: </strong><%= player["first_name"] || "N/A" %>
   <br>
   <strong>Last Name: </strong><%= player["last_name"] || "N/A" %>
   <br>
   <strong>Common Name: </strong><%= player["common_name"] || "N/A" %>
   <br>
+  <strong>Position: </strong><%= player["type"] %>
+  <br>
   <strong>Rating: </strong><%= player["rating"] %>
+  <%= form_tag('/add_new_player', method: :post) do |f| %>
+    <%= hidden_field_tag :name, player["first_name"] || player["common_name"] || "N/A" %>
+    <%= hidden_field_tag :photo_url, player["foot"] %>
+    <%= hidden_field_tag :position, player["type"] %>
+    <%= hidden_field_tag :goals_scored, player["attribute1"].to_i %>
+    <%= hidden_field_tag :country, player["dob"] %>
+    <%= hidden_field_tag :rating, player["rating"] %>
+    <%= submit_tag("Add #{player["first_name"]} to the Team") %>
+  <% end %>
   <hr>
 <% end %>
