@@ -1,0 +1,7 @@
+<div>
+  <%= form_tag("/search", method: "get") do %>
+    <%= label_tag(:club_id, "Search for Players in FIFA 14 (Enter a Club ID 1 - 83):") %>
+    <%= text_field_tag(:club_id) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</div>
