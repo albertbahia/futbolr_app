@@ -1,5 +1,5 @@
 <h2>Users Index</h2>
-<%= link_to 'Sign Up', new_user_path %>
+
 <hr>
 <% @users.each do |user| %>
   <p>Username: <%= link_to "#{user.username}", user_path(user.id) %><p>

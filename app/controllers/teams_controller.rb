@@ -49,14 +49,14 @@ class TeamsController < ApplicationController
   end
 
   def add_new_player
-    
+
     @player = Player.create({
       name: params[:name],
       photo_url: params[:photo_url],
       position: params[:position],
       goals_scored: params[:goals_scored],
       country: params[:country],
-      team_id: 1,
+      team_id: 5,
       rating: params[:rating]
       })
 
