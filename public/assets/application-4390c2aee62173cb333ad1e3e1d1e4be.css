@@ -10,11 +10,11 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
- */
 
+
+ */
+/* line 18, /Users/Niko/GA_WDI/projects/futbolr_app/app/assets/stylesheets/application.css.scss */
 body {
-  background-image: asset-url("retina_wood_@2X.png");
+  background-image: url(/assets/grey_wash_wall_@2X.png);
   text-align: center;
 }
