@@ -6,12 +6,20 @@
 <p><strong>Goals Scored: </strong><%= @team.goals_scored %></p>
 <p><strong>Formation: </strong><%= @team.formation %></p>
 <p><strong>Players on Team:</strong></p>
-<%= link_to 'Add Player', new_player_path %>
 <ul>
   <% @team.players.each do |player| %>
     <li><%= link_to "#{player.name.capitalize}", player_path %></li>
+ <% end %>
+ </ul>
+<div>
+  <%= form_tag("/search", method: "get") do %>
+    <%= label_tag(:club_id, "Search for Players in FIFA 14 (Enter a Club ID 1 - 83):") %>
+    <%= text_field_tag(:club_id) %>
+    <%= submit_tag("Search") %>
   <% end %>
-</ul>
+</div>
+<br>
+<br>
 <%= link_to 'Edit Team Information', edit_team_path(@team) %>
 <br>
 <br>
