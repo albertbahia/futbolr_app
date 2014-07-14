@@ -1,28 +1,16 @@
-== README
+# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Project Overview
+The Futbolr application allows users to create profiles, dream soccer teams and instantly challenge other users' teams.  Users can search for players to add to their team using the FIFA Tool guide API (http://tools.fifaguide.com/develop.php).
 
-Things you may want to cover:
+##### Features to be included in future releases:
+- Soccer Team instant challenge
 
-* Ruby version
+### User Stories
+- Link: Trello ==> https://trello.com/b/gqVE27n8/albert-bahia-futbolr
 
-* System dependencies
+### Entity-Relationship Diagram (ERD)
+- Link: Lucid Chart ==> https://www.lucidchart.com/documents/edit/6f08d047-de8b-477f-ab91-2e2fb52482ba/0
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+### Heroku
+- Link: http://gentle-oasis-1021.herokuapp.com/
