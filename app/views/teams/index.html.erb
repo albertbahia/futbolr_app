@@ -2,11 +2,9 @@
 
 <%= link_to 'Create Team', new_team_path %>
 
-<ul>
+<hr>
+<% @teams.each do |team| %>
+  <strong>Team: </strong><%= link_to "#{team.name.capitalize}", team_path(team.id) %>
+  <p><img src="<%= team.flag_url %>"><p>
   <hr>
-  <% @teams.each do |team| %>
-    <li><strong>Team: </strong><%= link_to "#{team.name.capitalize}", team_path(team.id) %></li>
-    <p><img src="<%= team.flag_url %>"><p>
-    <hr>
-  <% end %>
-</ul>
+<% end %>

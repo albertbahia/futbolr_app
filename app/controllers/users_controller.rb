@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  before_action :authorize, only: [:edit, :update, :destroy]
+
   def index
     @users = User.all
   end
@@ -37,6 +39,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
+    session[:current_user] = nil
     redirect_to users_path
   end
 

@@ -1,5 +1,7 @@
 class TeamsController < ApplicationController
 
+  before_action :authenticate, only: [:new, :create]
+  
   def index
     @teams = Team.all
   end
@@ -60,6 +62,12 @@ class TeamsController < ApplicationController
 
 
   private
+    def authenticate
+    if !session[:current_user]
+      redirect_to login_path
+    end
+  end
+
   def team_params
     params.require(:team).permit(:name, :flag_url, :goals_scored, :formation)
   end
