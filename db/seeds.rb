@@ -5,8 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-# require 'pry'
-# require_relative '../app/models/user.rb'
+
+
+require 'pry'
+
+
 
 users = [
   {
@@ -21,7 +24,8 @@ users = [
         flag_url: 'http://www.placekitten.com/300/300',
         goals_scored: 4,
         formation: '4-5-1',
-        players:[
+        players: FIFA.api_call(1)
+        [
           {
             name: 'mesut ozil',
             photo_url: 'http://www.placekitten.com/300/300',
@@ -47,7 +51,8 @@ users = [
         flag_url: 'http://www.placekitten.com/300/300',
         goals_scored: 5,
         formation: '4-4-2',
-        players: [
+        players:
+        [
           {
             name: 'lukas podolski',
             photo_url: 'http://www.placekitten.com/300/300',
@@ -73,7 +78,8 @@ users = [
         flag_url: 'http://www.placekitten.com/300/300',
         goals_scored: 4,
         formation: '4-3-3',
-        players: [
+        players:
+        [
           {
             name: 'per mertesacker',
             photo_url: 'http://www.placekitten.com/300/300',
@@ -87,6 +93,7 @@ users = [
     ]
   }
 ]
+
 
 users.each do |user|
   cur_user = User.create({

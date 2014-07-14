@@ -1,14 +1,12 @@
 <h2>Teams Index</h2>
 
-<!-- <%= link_to 'Create Team', new_team_path %> -->
+<%= link_to 'Create Team', new_team_path %>
 
 <ul>
   <hr>
   <% @teams.each do |team| %>
     <li><strong>Team: </strong><%= link_to "#{team.name.capitalize}", team_path(team.id) %></li>
     <p><img src="<%= team.flag_url %>"><p>
-    <p><strong>Goals Scored: </strong><%= team.goals_scored %><p>
-    <p><strong>Formation: </strong><%= team.formation %><p>
     <hr>
   <% end %>
 </ul>
