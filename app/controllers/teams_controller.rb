@@ -56,7 +56,7 @@ class TeamsController < ApplicationController
       position: params[:position],
       goals_scored: params[:goals_scored],
       country: params[:country],
-      team_id: 5,
+      team_id: 8,
       rating: params[:rating]
       })
 
