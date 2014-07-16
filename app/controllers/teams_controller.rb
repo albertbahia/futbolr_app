@@ -15,6 +15,7 @@ class TeamsController < ApplicationController
     @team.user_id = session[:current_user]
 
     if @team.save
+      user.teams << @team
       redirect_to team_path(@team)
     else
       render :new

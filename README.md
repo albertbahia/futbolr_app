@@ -10,7 +10,7 @@ The Futbolr application allows users to create profiles, dream soccer teams and 
 - Link: Trello ==> https://trello.com/b/gqVE27n8/albert-bahia-futbolr
 
 ### Entity-Relationship Diagram (ERD)
-- Link: Lucid Chart ==> https://www.lucidchart.com/documents/edit/6f08d047-de8b-477f-ab91-2e2fb52482ba/0
+- Link: Lucid Chart ==> https://www.lucidchart.com/publicSegments/view/53c6cab1-70b8-4473-85d1-03140a009994/image.jpeg
 
 ### Heroku
 - Link: http://gentle-oasis-1021.herokuapp.com/
