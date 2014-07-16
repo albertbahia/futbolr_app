@@ -1,14 +1,16 @@
 <h2><%= @player.name.capitalize %>'s Profile</h2>
 
-<img src="<%= @player.photo_url %>">
-<br>
-<strong>Position: </strong><%= @player.position.capitalize %>
-<br>
-<strong>Goals Scored: </strong><%= @player.goals_scored %>
-<br>
-<strong>Country: </strong><%= @player.country.capitalize %>
-<br>
-<strong>Rating: </strong><%= @player.rating %>
+<div class="bold">
+  <img src="<%= @player.photo_url %>">
+  <br>
+  Position: <%= @player.position.capitalize %>
+  <br>
+  Goals Scored: <%= @player.goals_scored %>
+  <br>
+  Country: <%= @player.country.capitalize %>
+  <br>
+  Rating: <%= @player.rating %>
+</div
 <br>
 <br>
 

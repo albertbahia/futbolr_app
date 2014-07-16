@@ -1,13 +1,19 @@
 <h2>Players Index</h2>
 
 <!-- <%= link_to 'Create Player', new_player_path %> -->
-
-<% @players.each do |player| %>
-  <hr>
-  <p><img src="<%= player.photo_url %>"></p>
-  <p><strong>Name: </strong><%= link_to "#{player.name.capitalize}", player_path(player.id) %></a></p>
-  <p><strong>Position: </strong><%= player.position %></p>
-  <p><strong>Goals Scored: </strong><%= player.goals_scored %></p>
-  <p><strong>Country: </strong><%= player.country %></p>
-  <p><strong>Rating: </strong><%= player.rating %></p>
-<% end %>
+<div class="bold">
+  <% @players.each do |player| %>
+    <hr>
+    <img src="<%= player.photo_url %>">
+    <br>
+    Name: <%= link_to "#{player.name.capitalize}", player_path(player.id) %></a>
+    <br>
+    Position: <%= player.position %>
+    <br>
+    Goals Scored: <%= player.goals_scored %>
+    <br>
+    Country: <%= player.country %>
+    <br>
+    Rating: <%= player.rating %>
+  <% end %>
+</div>
