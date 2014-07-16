@@ -1,11 +1,13 @@
 <h2>Users Index</h2>
 
 <hr>
-<% @users.each do |user| %>
-  <p>Username: <%= link_to "#{user.username}", user_path(user.id) %><p>
-  <p>ID: <%= user.id %></p>
-  <p>First Name: <%= user.first_name.capitalize %></p>
-  <p>Last Name: <%= user.last_name.capitalize %></p>
-  <p>Email: <%= user.email %></p>
-  <hr>
-<% end %>
+<div class="bold">
+  <% @users.each do |user| %>
+    <p>Username: <%= link_to "#{user.username}", user_path(user.id) %><p>
+    <p>ID: <%= user.id %></p>
+    <p>First Name: <%= user.first_name.capitalize %></p>
+    <p>Last Name: <%= user.last_name.capitalize %></p>
+    <p>Email: <%= user.email %></p>
+    <hr>
+  <% end %>
+</div>

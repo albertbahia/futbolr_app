@@ -2,15 +2,15 @@
 
 <img src="<%= @team.flag_url %>">
 <h3>Information:</h3>
-
-<p><strong>Team ID: </strong><%= @team.id %></p>
-<p><strong>Goals Scored: </strong><%= @team.goals_scored %></p>
-<p><strong>Formation: </strong><%= @team.formation %></p>
-<p><strong>Players on Team:</strong></p>
-
-<% @team.players.each do |player| %>
-  <%= link_to "#{player.name.capitalize}", player_path %>
-<% end %>
+<div class="bold">
+  Team ID: <%= @team.id %><br>
+  Goals Scored: <%= @team.goals_scored %><br>
+  Formation: <%= @team.formation %><br>
+  Players on Team:
+  <% @team.players.each do |player| %>
+    <%= link_to "#{player.name.capitalize}", player_path %>
+  <% end %>
+</div>
 <br>
 <br>
 <%= render 'playersearch' %>

@@ -1,14 +1,16 @@
 <h2><%= @user.username.capitalize %>'s Profile</h2>
 
-<p><strong>First Name: </strong><%= @user.first_name.capitalize %></p>
-<p><strong>Last Name: </strong><%= @user.last_name.capitalize %></p>
-<p><strong>Email: </strong><%= @user.email %></p>
-<p><strong>Teams:</strong></p>
-<ul>
-  <% @user.teams.each do |team| %>
-    <%= link_to "#{team.name.capitalize}", team_path %>
-  <% end %>
-</ul>
+<div class="bold">
+  First Name: <%= @user.first_name.capitalize %><br>
+  Last Name: <%= @user.last_name.capitalize %><br>
+  Email: <%= @user.email %><br>
+  Teams:
+  <ul>
+    <% @user.teams.each do |team| %>
+      <%= link_to "#{team.name.capitalize}", team_path %>
+    <% end %>
+  </ul>
+</div>
 <%= link_to "Add Team", new_team_path %>
 <br>
 <br>
