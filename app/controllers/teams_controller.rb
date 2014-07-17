@@ -13,9 +13,9 @@ class TeamsController < ApplicationController
   def create
     @team = Team.new(team_params)
     @team.user_id = session[:current_user]
-
+    @user = User.find(session[:current_user])
     if @team.save
-      user.teams << @team
+      @user.teams << @team
       redirect_to team_path(@team)
     else
       render :new
@@ -57,6 +57,7 @@ class TeamsController < ApplicationController
       position: params[:position],
       goals_scored: params[:goals_scored],
       country: params[:country],
+      team_id: 2,
       rating: params[:rating]
       })
 

@@ -14,7 +14,10 @@
  *= require_self
  */
 
+ @import url(http://fonts.googleapis.com/css?family=Bubblegum+Sans);
+
 body {
+  font-family: 'Bubblegum Sans', cursive;
   background-image: asset-url("retina_wood_@2X.png");
   text-align: center;
 }
