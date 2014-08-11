@@ -14,14 +14,42 @@
  *= require_self
  */
 
- @import url(http://fonts.googleapis.com/css?family=Bubblegum+Sans);
+ @import url(http://fonts.googleapis.com/css?family=Righteous);
 
 body {
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: 'Righteous', cursive;
   background-image: asset-url("retina_wood_@2X.png");
   text-align: center;
 }
 
 .bold {
   font-weight: bold;
+}
+
+header {
+  background-size: cover;
+  height: 170px;
+  background-image: url(/assets/soccer_header.jpg);
+  background-repeat: no-repeat;
+  text-align: center;
+  display: block;
+}
+
+#header-title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 50px;
+  font-size: xx-large;
+}
+
+#nav {
+  margin: 50px 0px 0px 0px;
+}
+
+li {
+  list-style: none;
+}
+
+.field_with_errors {
+  display: inline;
 }

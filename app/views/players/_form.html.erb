@@ -5,29 +5,30 @@
 </ul>
 
 <%= form_for @player do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br>
-
-  <%= f.label :photo_url %>
-  <%= f.text_field :photo_url %>
-  <br>
-
-  <%= f.label :position %>
-  <%= f.text_field :position %>
-  <br>
-
-  <%= f.label :goals_scored %>
-  <%= f.text_field :goals_scored %>
-  <br>
-
-  <%= f.label :country %>
-  <%= f.text_field :country %>
-  <br>
-
-  <%= f.label :rating %>
-  <%= f.text_field :rating %>
-  <br>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :photo_url %>
+    <%= f.text_field :photo_url %>
+  </div>
+  <div>
+    <%= f.label :position %>
+    <%= f.text_field :position %>
+  </div>
+  <div>
+    <%= f.label :goals_scored %>
+    <%= f.text_field :goals_scored %>
+  </div>
+  <div>
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </div>
+  <div>
+    <%= f.label :rating %>
+    <%= f.text_field :rating %>
+  </div>
 
   <%= f.submit 'Submit' %>
 <% end %>

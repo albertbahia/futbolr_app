@@ -1,11 +1,2 @@
-<h2>Homepage</h2>
-
-<p>
-  <% if session[:current_user] %>
-    Welcome back, <%= User.find(session[:current_user]).first_name %>! |
-    <%= link_to 'Log Out', logout_path %>
-  <% else %>
-    <%= link_to 'Log In', login_path %> |
-    <%= link_to 'Sign Up', new_user_path %>
-  <% end %>
-</p>
+<h2>Welcome to Futbolr!</h2>
+<p>Create Soccer Teams and Challenge Other Teams</p>
